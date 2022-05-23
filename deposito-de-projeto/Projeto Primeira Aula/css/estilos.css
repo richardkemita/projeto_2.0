@@ -1,0 +1,74 @@
+:root {
+  --cinza: #aaa;
+  --vermelha: #e93d50;
+  --vermelha-escura: #af303f;
+  --branca: #fff;
+  --luz: rgb(229, 255, 0);
+  --amarelo: #fcbc14;
+}
+
+body {
+  align-items: center;
+  background: linear-gradient(45deg, #54595F 0%,#2f2f30 100%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+}
+
+h1 {
+  color: var(--amarelo);
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+main {
+  background: linear-gradient(to bottom, #626468 0%,#454546 100%);
+  box-shadow: 6px 8px 0 6px #fcbc14, 10px 10px 10px #000;
+  border-radius: 30px;
+  display: grid;  
+  padding: 10px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+form {
+  margin-left: 25%;
+  margin-top: 25px;
+}
+
+form label, form legend {
+  margin-left: 25%;
+  color: var(--amarelo);
+	display:block;
+	font-size: 20px;
+	margin: 0 0 10px;
+}
+
+.input-padrao {
+  justify-content: center;
+	display: block;
+	margin: 0 0 20px;
+	padding: 10px 25px;
+	width: 75%;
+}
+
+.enviar {
+	width:40%;
+	padding: 15px 0;
+	background: orange;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	border: none;
+	border-radius: 5px;
+	transition: 1s all;
+	cursor: pointer;
+}
+
+.enviar:hover {
+	background: darkorange;
+	transform: scale(1.2);
+}

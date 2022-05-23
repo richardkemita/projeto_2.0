@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Datawake</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+
+	        <link rel="icon" type="image/png" href="images/bateria.png">
+	        <link rel="stylesheet" href="css/reset.css">
+	        <link rel="stylesheet" href="css/estilos.css">
+
+    </head>
+    <body>
+
+        <h1>Formulário</h1>
+
+        <main>
+			<form name="formCadastro" onsubmit="return validarFormulario()" method="post">
+				
+                <label for="nomeSobrenome">Nome e Sobrenome</label>
+				<input type="text" id="nomeSobrenome" class="input-padrao" required>
+
+                <label for="setor">Setor</label>
+                <select id="setor" class="input-padrao" ></select>
+
+
+                <label>Áreas envolvidas para o desenvolvimento</label>
+                <label><input type="checkbox">Financeiro</label>
+				<label><input type="checkbox">Compras</label>
+
+                <br>
+
+                <label for="tituloProjeto">Título do Projeto</label>
+				<input type="text" id="tituloProjeto" class="input-padrao" >
+
+                <label for="prazoFinal">Prazo Final</label>
+				<input type="date" id="prazoFinal" class="input-padrao" >
+
+                <input type="submit" value="Enviar formulário" class="enviar">
+				<script>
+				    function validarFormulario(){
+				        var nomePessoa = document.forms["formCadastro"]["nomeSobrenome"].value;
+				        if (nomePessoa == "") {
+				            alert("Favor informar o seu nome!");
+				            return false;     
+				        }
+				        else{
+				            alert("Olá, " + nomePessoa + " !" + "\nSeu Formulário Foi Cadastrado com Sucesso!" );
+				            return true;
+				        }
+				    }
+				</script>
+            </form>
+        </main>
+        <script src="main.js"></script>
+    </body>
+</html>
